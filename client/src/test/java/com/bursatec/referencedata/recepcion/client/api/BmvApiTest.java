@@ -48,8 +48,8 @@ public class BmvApiTest {
         Long heartbeatSeq = 2L;
         List<ReferenceData> referenceData = new ArrayList<>();
 
-        referenceData.add(new ReferenceData(1L, "Zx2018XXXXXXXXXX"));
-        referenceData.add(new ReferenceData(2L, "Zx2018XXXXXXXXXY"));
+        referenceData.add(new ReferenceData(1L, "Zx", "2018XXXXXXXXXX"));
+        referenceData.add(new ReferenceData(2L, "Zx", "2018XXXXXXXXXY"));
 
         String path = server.url("/").toString();
         path = path.substring(0, path.length() - 1);
@@ -59,7 +59,7 @@ public class BmvApiTest {
 
         RecordedRequest request1 = server.takeRequest();
         assertEquals("/v1/referenceData/receive?userid=" + userid + "&password=" + password, request1.getPath());
-        assertEquals("[{\"refDataId\":1,\"refData\":\"Zx2018XXXXXXXXXX\"},{\"refDataId\":2,\"refData\":\"Zx2018XXXXXXXXXY\"}]", request1.getBody().readUtf8());
+        assertEquals("[{\"refDataId\":1,\"refDataType\":\"Zx\",\"refData\":\"2018XXXXXXXXXX\"},{\"refDataId\":2,\"refDataType\":\"Zx\",\"refData\":\"2018XXXXXXXXXY\"}]", request1.getBody().readUtf8());
 
         ApiResponse<Void> responseHeartbeat = api.receiveHeartBeatWithHttpInfo(userid, password, heartbeatSeq);
         assertEquals(200, responseHeartbeat.getStatusCode());
