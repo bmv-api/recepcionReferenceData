@@ -1,13 +1,9 @@
 package com.bursatec.referencedata.recepcion.client.model;
 
-import java.util.Objects;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Objects;
 
 /**
  * ReferenceData
@@ -17,6 +13,9 @@ public class ReferenceData {
   @SerializedName("refDataId")
   private Long refDataId = null;
 
+  @SerializedName("refDataType")
+  private String refDataType = null;
+
   @SerializedName("refData")
   private String refData = null;
 
@@ -24,8 +23,9 @@ public class ReferenceData {
 
   }
 
-  public ReferenceData(Long refDataId, String refData) {
+  public ReferenceData(Long refDataId, String refDataType, String refData) {
       this.refDataId = refDataId;
+      this.refDataType = refDataType;
       this.refData = refData;
   }
 
@@ -45,6 +45,24 @@ public class ReferenceData {
 
   public void setRefDataId(Long refDataId) {
     this.refDataId = refDataId;
+  }
+
+  public ReferenceData refDataType(String refDataType) {
+    this.refDataType = refDataType;
+    return this;
+  }
+
+  /**
+   * Reference Data type
+   * @return refDataType
+   **/
+  @ApiModelProperty(example = "Zx", required = true, value = "Reference Data type")
+  public String getRefDataType() {
+    return refDataType;
+  }
+
+  public void setRefDataType(String refDataType) {
+    this.refDataType = refDataType;
   }
 
   public ReferenceData refData(String refData) {
@@ -76,12 +94,13 @@ public class ReferenceData {
     }
     ReferenceData referenceData = (ReferenceData) o;
     return Objects.equals(this.refDataId, referenceData.refDataId) &&
+        Objects.equals(this.refDataType, referenceData.refDataType) &&
         Objects.equals(this.refData, referenceData.refData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(refDataId, refData);
+    return Objects.hash(refDataId, refDataType, refData);
   }
 
 
@@ -91,6 +110,7 @@ public class ReferenceData {
     sb.append("class ReferenceData {\n");
     
     sb.append("    refDataId: ").append(toIndentedString(refDataId)).append("\n");
+    sb.append("    refDataType: ").append(toIndentedString(refDataType)).append("\n");
     sb.append("    refData: ").append(toIndentedString(refData)).append("\n");
     sb.append("}");
     return sb.toString();
