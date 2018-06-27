@@ -74,8 +74,8 @@ public class BmvApiExample {
         String password = "password_example"; // String | The user name for login
         List<ReferenceData> referenceData = new ArrayList<>(); // List<ReferenceData> |
         
-        referenceData.add(new ReferenceData(1L, "Zx2018XXXXXXXXXX"));
-        referenceData.add(new ReferenceData(2L, "Zx2018XXXXXXXXXY"));
+        referenceData.add(new ReferenceData(1L, "Zx", "2018XXXXXXXXXX"));
+        referenceData.add(new ReferenceData(2L, "Zx", "2018XXXXXXXXXY"));
                 
         try {
             // Here, set your server's URL
