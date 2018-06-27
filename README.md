@@ -7,7 +7,7 @@ Bienvenido al repositorio de **BMV - Recepción de Reference Data**
 
 ## Proyectos GitHub relacionados
 
-* [Retransmision Reference Data][]
+* [Retransmision Reference Data](https://github.com/bmv-api/retransmisionReferenceData)
 
 
 ## Aplicaciones de ejemplo
@@ -17,7 +17,4 @@ This category targets developers and architects who have a good understanding of
 * **[Client](client/README.md)** - Aplicación cliente de ejemplo
 * **[Server](server/README.md)** - Aplicacion server de ejemplo.
 
-# Resources
-
-[Retransmision Reference Data]: https://github.com/bmv-api/retransmisionReferenceData
 
