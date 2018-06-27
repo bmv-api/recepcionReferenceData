@@ -96,6 +96,7 @@ All URIs are relative to *https://<server-ip>:<port>*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BmvApi* | [**receiveHeartBeat**](docs/BmvApi.md#receiveHeartBeat) | **POST** /v1/referenceData/heartbeat | Receives heartbeats.
 *BmvApi* | [**receiveRefData**](docs/BmvApi.md#receiveRefData) | **POST** /v1/referenceData/receive | Receives Data Reference.
 
 

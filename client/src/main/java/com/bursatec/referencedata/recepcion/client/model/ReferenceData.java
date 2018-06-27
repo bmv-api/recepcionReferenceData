@@ -38,7 +38,7 @@ public class ReferenceData {
    * Id for this record, use this field as key to request retransmissions.
    * @return refDataId
   **/
-  @ApiModelProperty(example = "1", value = "Id for this record, use this field as key to request retransmissions.")
+  @ApiModelProperty(example = "1", required = true, value = "Id for this record, use this field as key to request retransmissions.")
   public Long getRefDataId() {
     return refDataId;
   }
@@ -56,7 +56,7 @@ public class ReferenceData {
    * Reference Data String
    * @return refData
   **/
-  @ApiModelProperty(example = "Zx2018XXXXXXXXXX", value = "Reference Data String")
+  @ApiModelProperty(example = "Zx2018XXXXXXXXXX", required = true, value = "Reference Data String")
   public String getRefData() {
     return refData;
   }
