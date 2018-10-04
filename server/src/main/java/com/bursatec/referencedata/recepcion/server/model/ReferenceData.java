@@ -108,7 +108,7 @@ public class ReferenceData   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ReferenceData {\n");
+    sb.append("ReferenceData {\n");
 
     sb.append("    refDataId: ").append(toIndentedString(refDataId)).append("\n");
     sb.append("    refDataType: ").append(toIndentedString(refDataType)).append("\n");
